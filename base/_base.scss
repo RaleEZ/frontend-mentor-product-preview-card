@@ -1,0 +1,32 @@
+// Default colours
+$black: #000;
+$white: #fff;
+
+// Primary
+$darkCyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+
+// Neutral
+$darkBlue: hsl(212, 21%, 14%);
+$greyishBlue: hsl(228, 12%, 48%);
+$btnColor: #3d8168;
+$btnHover: #1a4031;
+
+// Fonts
+$pSize: 14px;
+$fontMain: "Montserrat", sans-serif;
+$fontSecondary: "Fraunces", serif;
+
+// Breakpoints
+$mobile: 375px;
+$desktop: 1440px;
+
+// Body
+*, html {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: $cream;
+}

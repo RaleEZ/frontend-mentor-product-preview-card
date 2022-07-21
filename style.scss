@@ -1,0 +1,162 @@
+@import "base/_base.scss";
+
+// Created by text
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	height: 450px;
+	width: 600px;
+	background-color: $white;
+	border-radius: 10px;
+	overflow: hidden;
+
+	@media (max-width: $mobile) {
+		display: flex;
+		flex-direction: column;
+		width: 350px;
+		height: 620px;
+		overflow: hidden;
+	}
+
+	.picture {
+		height: 450px;
+		max-width: 350px;
+		border-radius: 10px 0 0 10px;
+		user-select: none;
+
+		@media (max-width: $mobile) {
+			background-image: url("images/image-product-mobile.jpg");
+			border-radius: 10px 10px 0 0;
+			height: 550px;
+			margin-top: 50px;
+		}
+	}
+
+	.container-items {
+		padding-left: 30px;
+		padding-bottom: 30px;
+		padding-top: 20px;
+
+		@media (max-width: $mobile) {
+			background-color: $white;
+			position: relative;
+			top: -140px;
+			padding-top: 10px;
+		}
+
+		#top {
+			text-transform: uppercase;
+			padding-top: 10px;
+			padding-bottom: 15px;
+			letter-spacing: 4px;
+			font-weight: 400;
+			font-family: $fontMain;
+			font-size: $pSize;
+
+			@media (max-width: $mobile) {
+				padding-bottom: 10px;
+			}
+		}
+
+		#name {
+			font-family: $fontSecondary;
+			font-weight: 700;
+			line-break: normal;
+
+			@media (max-width: $mobile) {
+				line-height: 30px;
+
+				br {
+					display: none;
+				}
+			}
+		}
+
+		#desc {
+			font-family: $fontMain;
+			font-size: $pSize;
+			font-weight: 300;
+			margin-top: 20px;
+			margin-bottom: 20px;
+
+			br:nth-child(3) {
+				display: none;
+			}
+			br:nth-child(5) {
+				display: none;
+			}
+
+			@media (max-width: $mobile) {
+				margin-top: 15px;
+				margin-bottom: 15px;
+
+				br:nth-child(3) {
+					display: block;
+				}
+
+				br:nth-child(2) {
+					display: none;
+				}
+				br:nth-child(4) {
+					display: none;
+				}
+
+			}
+		}
+
+		.price {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 20px;
+			flex-wrap: wrap;
+
+			#previous  {
+				font-family: $fontMain;
+				font-size: $pSize;
+				color: $greyishBlue;
+			}
+
+			#price {
+				font-family: $fontSecondary;
+				font-weight: 700;
+				color: $btnColor;
+			}
+
+			#cart {
+				display: flex;
+				gap: 10px;
+				font-family: $fontMain;
+				font-size: $pSize;
+				font-weight: 700;
+				color: $white;
+				padding-left: 70px;
+				padding-right: 70px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				background-color: $btnColor;
+				text-decoration: none;
+				text-align: center;
+				cursor: pointer;
+				border-radius: 10px;
+				user-select: none;
+
+				&:hover {
+					background-color: $btnHover;
+				}
+
+				@media (max-width: $mobile) {
+					padding-left: 90px;
+					padding-right: 90px;
+				}
+			}
+		}
+	}
+}
